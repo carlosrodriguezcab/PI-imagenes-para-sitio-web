@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — EastBlue</title>
+    <meta name="description" content="Comunícate con EastBlue. Estamos para ayudarte con tu pedido, producto o cualquier consulta.">
+    <meta name="author" content="Carlos Rodríguez Caballero">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-inner">
+            <a class="nav-logo" href="index.html">
+                <img src="Imagenes/Recursos/logo.png" alt="EastBlue — Ropa y accesorios de natación">
+            </a>
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="categoria-mujer.html">Mujer</a>
+                <a href="#" id="nav-hombre">Hombre</a>
+                <a href="#">Niños</a>
+                <a href="#">Accesorios</a>
+                <a href="#">Entrenamiento</a>
+            </nav>
+            <div class="nav-icons">
+                <a href="#" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#" aria-label="Mi cuenta"><i class="fa-solid fa-user"></i></a>
+                <a href="#" aria-label="Lista de deseos"><i class="fa-solid fa-heart"></i></a>
+                <a href="#" aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <nav class="breadcrumb" aria-label="Ruta de navegación">
+                <a href="index.html">Inicio</a>
+                <span class="breadcrumb-sep" aria-hidden="true">/</span>
+                <span>Contacto</span>
+            </nav>
+
+            <div style="text-align:center;padding:2rem 0 .5rem">
+                <h1 style="font-size:2.25rem;font-weight:800;color:var(--primary)">Contáctanos</h1>
+                <p style="color:var(--text-muted);font-size:1.0625rem;margin-top:.75rem">
+                    ¿Tienes dudas sobre tu pedido o nuestros productos? Estamos aquí para ayudarte.
+                </p>
+            </div>
+
+            <div class="contacto-layout">
+
+                <div class="page-form">
+                    <h2 class="page-form-title">Envíanos un mensaje</h2>
+                    <form onsubmit="handleSubmit(event)" novalidate>
+                        <div class="field">
+                            <label for="nombre">Nombre completo <span aria-hidden="true" style="color:#e53e3e">*</span></label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required autocomplete="name">
+                        </div>
+                        <div class="field">
+                            <label for="email">Correo electrónico <span aria-hidden="true" style="color:#e53e3e">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required autocomplete="email">
+                        </div>
+                        <div class="field">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?">
+                        </div>
+                        <div class="field">
+                            <label for="mensaje">Mensaje <span aria-hidden="true" style="color:#e53e3e">*</span></label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Describe tu consulta con el mayor detalle posible." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full btn-lg">
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                            Enviar mensaje
+                        </button>
+                        <p id="form-msg" style="margin-top:1rem;color:var(--accent);font-weight:600;display:none">
+                            <i class="fa-solid fa-check-circle"></i> ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.
+                        </p>
+                    </form>
+                </div>
+
+                <aside class="contacto-aside">
+                    <div class="contacto-img">
+                        <img src="Imagenes/Recursos/nadadores-conviviendo.jpg"
+                             alt="Dos nadadores en instalaciones acuáticas — el equipo EastBlue valora la comunidad" loading="lazy">
+                    </div>
+                    <h3 class="contacto-info-title">Información de contacto</h3>
+                    <div class="contacto-info-list">
+                        <div class="ci-item">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            <p>Blvd. Gral. Marcelino García Barragán 1421, Olímpica,<br>44430 Guadalajara, Jalisco, México</p>
+                        </div>
+                        <div class="ci-item">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            <p><a href="tel:+523312345678" style="color:var(--primary)">+52 33 1234 5678</a></p>
+                        </div>
+                        <div class="ci-item">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <p><a href="mailto:contacto@eastblue.com" style="color:var(--primary)">contacto@eastblue.com</a></p>
+                        </div>
+                        <div class="ci-item">
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                            <p>Lunes a viernes: 9:00 – 18:00 h<br>Sábados: 10:00 – 14:00 h</p>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="Imagenes/Recursos/logo.png" alt="EastBlue">
+                    <p>La tienda especializada en ropa y accesorios de natación de alta calidad. Equipamos a nadadores de todos los niveles, desde principiantes hasta competidores de élite.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Correo"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="categoria-mujer.html">Mujer</a></li>
+                        <li><a href="#">Hombre</a></li>
+                        <li><a href="#">Niños</a></li>
+                        <li><a href="#">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Guía de tallas</a></li>
+                        <li><a href="#">Envíos y entregas</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nosotros</h4>
+                    <ul>
+                        <li><a href="nosotros.html">Acerca de EastBlue</a></li>
+                        <li><a href="nosotros.html#historia">Nuestra historia</a></li>
+                        <li><a href="nosotros.html#valores">Nuestros valores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="contacto.html">Envíanos un mensaje</a></li>
+                        <li><a href="mailto:contacto@eastblue.com">contacto@eastblue.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 EastBlue. Todos los derechos reservados. &nbsp;|&nbsp; Diseñado por <strong>Carlos Rodríguez Caballero</strong></p>
+                <p class="referencias">Fotografías: <a href="https://unsplash.com/" target="_blank">Unsplash</a> (licencia libre). Imágenes de producto: <a href="https://arenaswim.com.mx/" target="_blank">Arena Swim México</a> (uso educativo). Iconos: <a href="https://fontawesome.com/" target="_blank">FontAwesome Free 6.0</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    function handleSubmit(e) {
+        e.preventDefault();
+        const msg = document.getElementById('form-msg');
+        msg.style.display = 'block';
+        e.target.reset();
+        setTimeout(() => { msg.style.display = 'none'; }, 5000);
+    }
+    </script>
+</body>
+</html>
